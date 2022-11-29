@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TiendaDelivery.App.Persistencia\TiendaDelivery.App.Persistencia.csproj" />
+    <ProjectReference Include="..\TiendaDelivery.App.Dominio\TiendaDelivery.App.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
