@@ -5,5 +5,8 @@ namespace TiendaDelivery.App.Persistencia
     public interface IRepositorioProducto
     {
         public producto AddProducto(producto producto);
+        public IEnumerable<producto> GetAllProductos();
     }
+
+    
 }

@@ -13,5 +13,10 @@ namespace TiendaDelivery.App.Persistencia
             _appContext.SaveChanges();
             return productoInsertado.Entity;
          }
+
+         public IEnumerable<producto> GetAllProductos()
+        {
+            return _appContext.Productos;
+        }
     }
 }
