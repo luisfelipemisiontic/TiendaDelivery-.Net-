@@ -1,0 +1,36 @@
+﻿@page
+@model TiendaDelivery.App.Frontend.Pages.Productos.DetailsModel
+@{
+}
+<h1>Detalles del Producto</h1>
+<table class="table table-striped">
+    <tr>
+        <th scope="col">Id</th>
+        <td>@Model.producto.Id</td>
+    </tr>
+    <tr>
+        <th scope="col">Nombre</th>
+        <td>@Model.producto.nombre</td>
+    </tr>
+     <tr>
+        <th scope="col">infGeneral</th>
+        <td>@Model.producto.infGeneral</td>
+    </tr>
+     <tr>
+        <th scope="col">infNutricional</th>
+        <td>@Model.producto.infNutricional</td>
+    </tr>
+     <tr>
+        <th scope="col">CodInterno</th>
+        <td>@Model.producto.codInterno</td>
+    </tr>
+     <tr>
+        <th scope="col">CodBarras</th>
+        <td>@Model.producto.codBarras</td>
+    </tr>
+     <tr>
+        <th scope="col">Promociones</th>
+        <td>@Model.producto.promociones</td>
+    </tr>
+</table>
+<a class="btn btn-primary" asp-page="./Index">Volver</a>

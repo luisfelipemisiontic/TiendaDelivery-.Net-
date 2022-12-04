@@ -18,5 +18,12 @@ namespace TiendaDelivery.App.Persistencia
         {
             return _appContext.Productos;
         }
+
+        public producto GetProducto(int idproducto)
+        {
+            var productoEncontrado = _appContext.Productos.Find(idproducto);
+            return productoEncontrado;
+        }
+
     }
 }
