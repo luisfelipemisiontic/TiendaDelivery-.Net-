@@ -3,3 +3,34 @@
 @{
 }
 <h1>LISTA DE PRODUCTOS</h1>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">imagen</th>
+      <th scope="col">nombre</th>
+      <th scope="col">infGeneral</th>
+      <th scope="col">precio</th>
+      <th scope="col">infNutricional</th>
+      <th scope="col">codInterno</th>
+      <th scope="col">codBarras</th>
+      <th scope="col">promociones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var producto in Model.productos)
+        {
+            <tr>
+                <th scope="row">@producto.Id</th>
+                <td><img src="@producto.imagen" alt="imagen" width="100"></td>
+                <td>@producto.nombre</td>
+                <td>@producto.infGeneral</td>
+                <td>@producto.precio</td>
+                <td>@producto.infNutricional</td>
+                <td>@producto.codInterno</td>
+                <td>@producto.codBarras</td>
+                <td>@producto.promociones</td>
+            </tr>
+        }
+  </tbody>
+</table>
