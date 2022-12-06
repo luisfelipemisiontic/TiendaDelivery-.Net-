@@ -1,0 +1,41 @@
+﻿@page
+@model TiendaDelivery.App.Frontend.pages.Productos.CreateModel
+@{
+}
+<h1>Nuevo Producto</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="producto.imagen"></label>
+        <input asp-for="producto.imagen" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.nombre"></label>
+        <input asp-for="producto.nombre" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.infGeneral"></label>
+        <input asp-for="producto.infGeneral" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.precio"></label>
+        <input asp-for="producto.precio" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.infNutricional"></label>
+        <input asp-for="producto.infNutricional" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.codInterno"></label>
+        <input asp-for="producto.codInterno" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.codBarras"></label>
+        <input asp-for="producto.codBarras" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="producto.promociones"></label>
+        <input asp-for="producto.promociones" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Crear municipio</button>
+</form>
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>
