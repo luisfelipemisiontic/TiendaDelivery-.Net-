@@ -1,28 +1,28 @@
 ﻿@page
-@model TiendaDelivery.App.Frontend.pages.Productos.CreateModel
+@model TiendaDelivery.App.Frontend.Pages.Productos.EditModel
 @{
 }
-<h1>Nuevo Producto</h1>
+<h1>Editar Producto</h1>
 <form method="post">
+    <div class="form-group">
+        <label asp-for="producto.Id"></label>
+        <input asp-for="producto.Id" class="form-control" readonly>
+    </div>
     <div class="form-group">
         <label asp-for="producto.imagen"></label>
         <input asp-for="producto.imagen" class="form-control">
-        <span class="text-danger" asp-validation-for="producto.imagen"></span>
     </div>
     <div class="form-group">
         <label asp-for="producto.nombre"></label>
         <input asp-for="producto.nombre" class="form-control">
-        <span class="text-danger" asp-validation-for="producto.nombre"></span>
     </div>
     <div class="form-group">
         <label asp-for="producto.infGeneral"></label>
         <input asp-for="producto.infGeneral" class="form-control">
-        <span class="text-danger" asp-validation-for="producto.infGeneral"></span>
     </div>
     <div class="form-group">
         <label asp-for="producto.precio"></label>
         <input asp-for="producto.precio" class="form-control">
-        <span class="text-danger" asp-validation-for="producto.precio"></span>
     </div>
     <div class="form-group">
         <label asp-for="producto.infNutricional"></label>
@@ -31,7 +31,6 @@
     <div class="form-group">
         <label asp-for="producto.codInterno"></label>
         <input asp-for="producto.codInterno" class="form-control">
-        <span class="text-danger" asp-validation-for="producto.codInterno"></span>
     </div>
     <div class="form-group">
         <label asp-for="producto.codBarras"></label>
@@ -41,6 +40,6 @@
         <label asp-for="producto.promociones"></label>
         <input asp-for="producto.promociones" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Crear Producto</button>
+    <button type="submit" class="btn btn-primary btn-block">Editar Producto</button>
 </form>
 <a class="btn btn-secondary" asp-page="./Index">Volver</a>

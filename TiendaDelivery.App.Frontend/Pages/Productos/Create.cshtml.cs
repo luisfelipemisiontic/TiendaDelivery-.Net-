@@ -22,8 +22,13 @@ namespace TiendaDelivery.App.Frontend.pages.Productos
 
         public IActionResult OnPost(producto producto)
         {
+            if (ModelState.IsValid){
             _repoProducto.AddProducto(producto);
             return RedirectToPage("Index");
+            }
+            else{
+                return Page();
+            }
         }
 
 
