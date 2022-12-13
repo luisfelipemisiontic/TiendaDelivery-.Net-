@@ -21,5 +21,13 @@ namespace TiendaDelivery.App.Frontend.Pages.Productos
             productos = _repoProducto.GetAllProductos();
 
         }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            productos = _repoProducto.GetAllProductos();
+            _repoProducto.DeleteProducto(id);
+            return Page();
+        }
+
     }
 }

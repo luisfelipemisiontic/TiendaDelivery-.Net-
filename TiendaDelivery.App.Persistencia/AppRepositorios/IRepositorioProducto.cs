@@ -8,7 +8,7 @@ namespace TiendaDelivery.App.Persistencia
         public IEnumerable<producto> GetAllProductos();
         public producto GetProducto(int idproducto);
         public producto UpdateProducto(producto producto);
-
+        public producto DeleteProducto(int idproducto);
     }
 
     

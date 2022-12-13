@@ -43,5 +43,16 @@ namespace TiendaDelivery.App.Persistencia
             return productoEncontrado;
         }
 
+        public producto DeleteProducto(int idproducto)
+        {
+            var productoEncontrado = _appContext.Productos.Find(idproducto);
+            if (productoEncontrado != null)
+            {
+                _appContext.Productos.Remove(productoEncontrado);
+                _appContext.SaveChanges();
+            }
+            return productoEncontrado;
+        }
+
     }
 }

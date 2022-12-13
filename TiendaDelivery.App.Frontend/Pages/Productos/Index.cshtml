@@ -14,21 +14,27 @@
     </tr>
   </thead>
   <tbody>
-    @foreach(var producto in Model.productos)
-        {
-            <tr>
-                <th scope="row">@producto.Id</th>
-                <td><img src="@producto.imagen" alt="imagen" width="200"></td>
-                <td>@producto.precio</td>
-                <td>
-                    <a class="btn btn-primary" asp-page="./Details" asp-route-id="@producto.Id">
-                        Detalles
-                    </a>
-                    <a class="btn btn-secondary" asp-page="./Edit" asp-route-id="@producto.Id">
-                        Editar
-                    </a>
-                </td>
-            </tr>
-        }
+    @foreach (var producto in Model.productos)
+    {
+      <tr>
+        <th scope="row">@producto.Id</th>
+        <td><img src="@producto.imagen" alt="imagen" width="200"></td>
+        <td>@producto.precio</td>
+        <td>
+          <a class="btn btn-primary" asp-page="./Details" asp-route-id="@producto.Id">
+            Detalles
+          </a>
+          <a class="btn btn-secondary" asp-page="./Edit" asp-route-id="@producto.Id">
+            Editar
+          </a>
+          <form method="post" class="d-inline">
+            <button asp-page-handler="Delete" asp-route-id="@producto.Id"
+            onclick="return confirm('Esta Seguro de eliminar el producto?')" class="btn btn-danger">
+              Delete
+            </button>
+          </form>
+        </td>
+      </tr>
+    }
   </tbody>
 </table>
