@@ -2,6 +2,14 @@
 @model TiendaDelivery.App.Frontend.Pages.Productos.IndexModel
 @{
 }
+<form method="post">
+  <div class="input-group mb-3">
+    <input asp-for="@Model.BusquedaActual" name="nombre" class="form-control">
+    <button class="btn btn-outline-secondary" asp-page-handler="Buscar">
+      Buscar
+    </button>
+  </div>
+</form>
 <a class="btn btn-primary" asp-page="./Create">Crear</a>
 <h1>LISTA DE PRODUCTOS</h1>
 <table class="table table-sm">
