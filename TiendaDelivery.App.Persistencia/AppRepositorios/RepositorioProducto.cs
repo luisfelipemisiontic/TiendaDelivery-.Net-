@@ -54,5 +54,13 @@ namespace TiendaDelivery.App.Persistencia
             return productoEncontrado;
         }
 
+        public IEnumerable<producto> SearchProductos(string nombre)
+        {
+            return _appContext.Productos
+            .Where(e => e.nombre.Contains(nombre));
+
+        }
+
+
     }
 }
